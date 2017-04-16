@@ -1,0 +1,163 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: $font-stack;
+	color: $primary-color; 
+}
+
+
+.container{
+	display: flex;
+	align-items: stretch;
+	justify-content: space-around;
+	flex-flow: row;
+	width: 100%;
+	height: 100%;
+}
+
+.sidebar{
+	width: 150px;
+	background-color: #000;
+	flex:1;
+	text-align:center;
+
+	.fixed{
+		position: fixed;
+		width: inherit;
+	}
+
+	.logo{
+		display: inline-block;
+	}
+
+	.link{
+		display: flex;
+		align-items: center;
+		justify-content: left;
+		flex-flow: row;
+
+		font-weight: bold;
+		font-size: 14px;
+		text-transform: uppercase;
+		color: #e4e4e4;
+		background-color: #333;
+		margin-bottom: 3px; 
+		padding: 20px 5px;
+		text-decoration: none;
+
+		.material-icons{
+			font-size: 24px;
+			margin-right: 5px;
+		}
+	}
+
+	.explore{
+		border-right: 5px solid #4e9ad3;
+	}
+
+	.folder{
+		border-right: 5px solid #f631ef;
+	}
+
+	.upload{
+		border-right: 5px solid #ff9400;
+	}
+}
+
+.content{
+	width: calc(100% - 150px);
+
+	.banner{
+		height: 149px;
+		background-image: url("../images/top_banner.jpg");
+		background-size: cover;
+		position: relative;
+
+		.heading-wrapper{
+			position: absolute;
+			bottom: 10px;
+			padding-left: 20px;
+			color: #403f3f;
+
+			span{
+				font-size: 18px;
+				text-transform: uppercase;
+			}
+
+			h1{
+				font-size: 60px;
+				text-transform: uppercase;
+				margin: 0px;
+			}
+		}
+	}
+
+	.cards-container{
+		display: flex;
+		flex-flow: row wrap;
+
+		.card-wrapper{
+
+			width: 33.33%;
+
+			.card{
+				margin: 10px;
+				border: 1px solid #eee;
+				color: #403f3f;
+				text-align: center;
+
+				img{
+					width: 100%
+				}
+
+				.desc{ 
+					padding: 20px;
+					text-align: center;
+					height: 180px;
+
+					h5{
+						font-size: 18px;
+						text-transform: capitalize;
+					} 
+
+					span{
+						font-size: 14px;
+					}
+
+					hr{
+						margin: 20px 10px;
+						display: block;
+					    height: 1px;
+					    border: 0;
+					    border-top: 3px solid #ccc;
+					    padding: 0; 
+					}
+
+					p{
+						font-size: 12px;
+						line-height: 24px;
+					}
+
+					.material-icons{ 
+						color:#666;
+					}
+				}
+			}
+			  
+		}
+
+	}
+ 
+	.sort-wrapper{
+		text-align: right;
+		padding-right: 10px;
+
+		#sort-icon{
+			cursor: pointer;
+		}
+	}
+
+}
